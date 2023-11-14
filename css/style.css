@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -22,4 +23,46 @@ p {
 .container {
   width: 1200px;
   margin: 0 auto;
+}
+.main_calculator {
+  padding: 50px;
+}
+.calculator_form {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.calculator_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.input_fields {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.input_fields input {
+  width: 100%;
+  outline: none;
+  border: none;
+  border-bottom: 1px;
+  border-bottom-style: solid;
+  border-bottom-color: goldenrod;
+  padding: 5px;
+  font-family: "Open Sans", sans-serif;
+}
+.buttons_div button {
+  cursor: pointer;
+  padding: 8px 20px;
+  border: 1px solid goldenrod;
+  outline: none;
+  transition: all linear 0.3s;
+  font-size: 18px;
+  font-weight: 600;
+  font-family: "Open Sans", sans-serif;
+}
+.buttons_div button:hover {
+  background-color: goldenrod;
+  color: #fff;
 }
