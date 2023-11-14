@@ -5,6 +5,9 @@ let addBtn = document.querySelector(".addBtn");
 let subBtn = document.querySelector(".subBtn");
 let proBtn = document.querySelector(".proBtn");
 let divBtn = document.querySelector(".divBtn");
+let output = document.querySelector(".output");
+
+output.style.display = "none";
 
 // operations
 let addition = (number1, number2) => {
@@ -26,35 +29,45 @@ let clearInputFields = () => {
   input2.value = "";
 };
 
+// show output
+let showOutput = (result) => {
+  output.style.display = "block";
+  output.innerHTML = `Result: ${result}`;
+};
+
 // Add two numbers
 addBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  operation(addition);
+  let result = operation(addition);
+  showOutput(result);
 });
 
 // Subtruct two numbers
 subBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  operation(subtruction);
+  let result = operation(subtruction);
+  showOutput(result);
 });
 
 // Multiplication two numbers
 proBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  operation(product);
+  let result = operation(product);
+  showOutput(result);
 });
 
 // Division two numbers
 divBtn.addEventListener("click", (e) => {
   e.preventDefault();
-  operation(division);
+  let result = operation(division);
+  showOutput(result);
 });
 
 // do the opration
 let operation = (operationType) => {
   let number1 = Number(input1.value);
   let number2 = Number(input2.value);
-  let sum = operationType(number1, number2);
-  console.log(sum);
+  let calculation = operationType(number1, number2);
   clearInputFields();
+  return calculation.toFixed(4);
 };

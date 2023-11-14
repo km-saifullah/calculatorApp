@@ -25,9 +25,11 @@ p {
   margin: 0 auto;
 }
 .main_calculator {
+  width: 100%;
   padding: 50px;
 }
 .calculator_form {
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: center;
@@ -65,4 +67,11 @@ p {
 .buttons_div button:hover {
   background-color: goldenrod;
   color: #fff;
+}
+.output {
+  text-align: center;
+  font-size: 30px;
+  font-weight: 600;
+  color: salmon;
+  font-family: "Open Sans", sans-serif;
 }
